@@ -87,7 +87,6 @@
     <Folder Include="assets\images\" />
     <Folder Include="assets\styles\" />
     <Folder Include="assets\templates\" />
-    <Folder Include="build\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,8 +1,10 @@
+[build]*
+
 /Sample1/src/bin
 /Sample1/src/obj
 
 /Sample1/src/node_modules
-/Sample1/src/build/*
+/Sample1/src/assets/scripts/[build]*
 /Sample1/Sample1.v11.suo
 /Sample1/src/Sample1.csproj.user
 /Sample1/src/npm-debug.log
