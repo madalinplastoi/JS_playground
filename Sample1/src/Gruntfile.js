@@ -24,6 +24,21 @@
                 }]
             }
         },
+        'string-replace': {
+            dist: {
+                files: [{ 'index.html': 'index.html' }, { 'assets/scripts/build_<%= pkg.version %>/config.js': 'assets/scripts/build_<%= pkg.version %>/config.js' }],
+                options: {
+                    replacements: [{
+                        pattern: 'assets/scripts/src/config.js',
+                        replacement: 'assets/scripts/build_<%= pkg.version %>/config.js'
+                    },
+                    {
+                        pattern: 'assets/scripts/src',
+                        replacement: 'assets/scripts/build_<%= pkg.version %>'
+                    }]
+                }
+            }
+        },
         iisexpress: {
             server: {
                 options: {
@@ -37,9 +52,10 @@
 
     //grunt.loadNpmTasks('grunt-remove-logging');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-string-replace');
     grunt.loadNpmTasks('grunt-iisexpress');
 
     // Default task(s).
     //grunt.registerTask('default', ['removelogging', 'uglify', 'iisexpress']);
-    grunt.registerTask('default', ['uglify']);
+    grunt.registerTask('default', ['uglify', 'string-replace']);
 };
