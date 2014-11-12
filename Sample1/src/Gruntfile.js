@@ -12,7 +12,7 @@
 
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+                banner: '/*! <%= pkg.name %>.<%= pkg.version %> built on <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             all: {
                 files: [{
@@ -20,7 +20,7 @@
                     cwd: 'assets/scripts/src/',
                     src: ['*.js', '**/*.js', '!**/*.min.js', '!*.min.js'],
                     dest: 'assets/scripts/build_<%= pkg.version %>/',
-                    ext: '.min.js'
+                    ext: '.js'
                 }]
             }
         },
