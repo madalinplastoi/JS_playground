@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="assets/scripts/lib/require/require.js"></script>
+    <script type="text/javascript" src="assets/scripts/src/config.js"></script>
+    <script>
+        require(['AppBootstrap']);
+    </script>
+    <style type="text/css">
+        .table-like {
+            border: 1px solid #000000;
+            width: 300px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Below the KO & RequireJs magic will happen:</h1>
+    <div id="inside-console"></div>
+    <div class="table-like">
+        <span>Id - </span>
+        <span>Name - </span>
+        <span>Age</span>
+    </div>
+    <div id="ko-wrapper" data-bind="foreach: Persons" class="table-like">
+         <div>
+             <span data-bind="text: Id"></span> - 
+             <span data-bind="text: Name"></span> - 
+             <span data-bind="text: Age"></span>
+         </div>
+     </div>
+</body>
+</html>
