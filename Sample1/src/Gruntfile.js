@@ -19,8 +19,8 @@
                     expand: true,
                     cwd: 'assets/scripts/src/',
                     src: ['*.js', '**/*.js', '!**/*.min.js', '!*.min.js'],
-                    dest: 'build/',
-                    ext: '.<%= pkg.version %>.min.js'
+                    dest: 'assets/scripts/build_<%= pkg.version %>/',
+                    ext: '.min.js'
                 }]
             }
         },
@@ -41,5 +41,5 @@
 
     // Default task(s).
     //grunt.registerTask('default', ['removelogging', 'uglify', 'iisexpress']);
-    grunt.registerTask('default', ['uglify', 'iisexpress']);
+    grunt.registerTask('default', ['uglify']);
 };
