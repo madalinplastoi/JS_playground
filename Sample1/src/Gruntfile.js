@@ -41,6 +41,20 @@
                     }]
                 }
             }
+        },
+        cachebreaker: {
+            dev: {
+                options: {
+                    match: ['build_<%= pkg.version %>/config.js'],
+                    replacement: 'md5',
+                    src: {
+                        path: 'assets/scripts/src/config.js'
+                    }
+                },
+                files: {
+                    src: ['index.html']
+                }
+            }
         }
     });
 
@@ -48,6 +62,7 @@
     grunt.loadNpmTasks('grunt-remove-logging');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-string-replace');
+    grunt.loadNpmTasks('grunt-cache-breaker');
 
-    grunt.registerTask('default', ['clean', 'removelogging', 'uglify', 'string-replace']);
+    grunt.registerTask('default', ['clean', 'removelogging', 'uglify', 'string-replace', 'cachebreaker']);
 };
