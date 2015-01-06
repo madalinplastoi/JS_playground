@@ -8,10 +8,6 @@ export class WebComponent{
 
     }
 
-    activate():void{
-
-    }
-
     canDeactivate():void{
 
     }

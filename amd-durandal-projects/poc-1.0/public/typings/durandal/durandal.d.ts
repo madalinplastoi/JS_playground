@@ -870,7 +870,7 @@ declare module 'plugins/history' {
  * @requires knockout
  */
 declare module 'plugins/http' {
-    /**
+   /**
      * The name of the callback parameter to inject into jsonp requests by default.
      * @default callback
      */

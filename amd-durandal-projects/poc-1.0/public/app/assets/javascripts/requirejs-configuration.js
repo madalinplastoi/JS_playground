@@ -35,8 +35,9 @@
      */
     var start = new Date();
 
-    requirejs(['./AppBoot'], function(appReference){
+    requirejs(['./AppBoot, ./PluginsManager.js'], function(appReference, manager){
         var app = new appReference.AppBoot();
+
     });
 
     requirejs.onResourceLoad = function (context, map, depArray) {

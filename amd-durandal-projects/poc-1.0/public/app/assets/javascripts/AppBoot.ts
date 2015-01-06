@@ -5,26 +5,33 @@
 ///<reference path='../../../typings/durandal/durandal.d.ts'/>
 ///<reference path='../../../typings/jquery/jquery.d.ts'/>
 ///<reference path='../../../typings/knockout/knockout.d.ts'/>
+///<reference path='salaryassignment/main-webc/model/MainModelProxy.ts'/>
 
 import DurandalSystemModule = require('durandal/system');
 import DurandalAppModule = require('durandal/app');
 import DurandalViewLocatorModule = require('durandal/viewLocator');
-
+//import pluginsManager = require("PluginsManager");
+import proxyRef = require('./salaryassignment/main-webc/model/MainModelProxy');
 export class AppBoot {
-
     constructor() {
-
         debugger;
+        //pluginsManager.PluginsManager.Manager.getInstance();
         DurandalSystemModule.debug(true);
-
         DurandalAppModule.title = 'amd-durandal-SalaryAssignment-POC-v1.0';
 
+        //@todo : add observable plugin
         DurandalAppModule.configurePlugins({
             router: true,
+            http: true,
+            observable: true,
+            serializer: true,
             dialog: true
         });
+        debugger;
 
-        DurandalAppModule.start().then(function() {
+        proxyRef.SalaryAssignment.MainModelProxy.getInstance();
+
+        DurandalAppModule.start().then(function () {
             //Replace 'viewmodels' in the moduleId with 'views' to locate the view.
             //Look for partial views in a 'views' folder in the root.
             DurandalViewLocatorModule.useConvention();
