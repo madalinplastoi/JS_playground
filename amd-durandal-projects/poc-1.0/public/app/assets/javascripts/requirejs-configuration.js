@@ -35,9 +35,13 @@
      */
     var start = new Date();
 
-    requirejs(['./AppBoot, ./PluginsManager.js'], function(appReference, manager){
-        var app = new appReference.AppBoot();
+    requirejs.Plugin = null;
 
+    requirejs(['plugins/http'], function(http) {
+        requirejs.Plugin = http;
+        requirejs(['./AppBoot'], function (appReference) {
+            appReference.AppBoot.getInstance();
+        })
     });
 
     requirejs.onResourceLoad = function (context, map, depArray) {

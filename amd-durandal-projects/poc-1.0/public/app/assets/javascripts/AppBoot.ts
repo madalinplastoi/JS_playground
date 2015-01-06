@@ -10,12 +10,16 @@
 import DurandalSystemModule = require('durandal/system');
 import DurandalAppModule = require('durandal/app');
 import DurandalViewLocatorModule = require('durandal/viewLocator');
-//import pluginsManager = require("PluginsManager");
 import proxyRef = require('./salaryassignment/main-webc/model/MainModelProxy');
+
 export class AppBoot {
+    private static _instance:AppBoot = null;
+
     constructor() {
-        debugger;
-        //pluginsManager.PluginsManager.Manager.getInstance();
+        if (AppBoot._instance) {
+            throw new Error("Error: Instantiation failed: Use AppBoot.getInstance() instead of new.");
+        }
+
         DurandalSystemModule.debug(true);
         DurandalAppModule.title = 'amd-durandal-SalaryAssignment-POC-v1.0';
 
@@ -27,7 +31,6 @@ export class AppBoot {
             serializer: true,
             dialog: true
         });
-        debugger;
 
         proxyRef.SalaryAssignment.MainModelProxy.getInstance();
 
@@ -39,5 +42,14 @@ export class AppBoot {
             //Show the app by setting the root view model for our application with a transition.
             //app.setRoot('viewmodels/shell', 'entrance');
         });
+
+        AppBoot._instance = this;
+    }
+
+    static getInstance():AppBoot{
+        if (AppBoot._instance === null) {
+            AppBoot._instance = new AppBoot();
+        }
+        return AppBoot._instance;
     }
 }
