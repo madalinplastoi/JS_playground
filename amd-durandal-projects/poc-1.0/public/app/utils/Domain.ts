@@ -2,19 +2,21 @@
  * Created by madalin on 1/2/2015.
  */
 
-module Domain {
+export class Customer {
+    public Id:string;
+    public FirstName:string;
+    public LastName:string;
 
-    export class Customer {
-        public Id:string;
-        public FirstName:string;
-        public LastName:string;
+    constructor() {
 
-        constructor(id:string, firstName:string, lastName:string) {
-            this.Id = id;
-            this.FirstName = firstName;
-            this.LastName = lastName;
-        }
     }
+
+    init(id:string, firstName:string, lastName:string):void {
+        this.Id = id;
+        this.FirstName = firstName;
+        this.LastName = lastName;
+    }
+}
 
     export class Employer {
         public Id:string;
@@ -120,4 +122,3 @@ module Domain {
             this.Code = code;
         }
     }
-}

@@ -18,7 +18,7 @@ class Shell {
         this.router = DurandalRootRouter;
         this.headerActivationData = {
             customerId: 12,
-            userId: 4
+            userId: 23
         };
     }
 

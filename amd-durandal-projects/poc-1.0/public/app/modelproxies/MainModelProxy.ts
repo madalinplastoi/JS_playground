@@ -31,11 +31,9 @@ export class MainModelProxy {
     }
 
     loadData(customerId:number, userId:number) {
-        return AppConfiguration.DurandalHttpPlugin.get("http://google.com").fail(function(error){
-            debugger;
+        return AppConfiguration.DurandalHttpPlugin.get("/salaryAssignment/startWith?customerId=" + customerId + "&userId=" + userId).fail(function(error){
         }).done(function(result){
             this.data = result;
         });
-        //return DurandalHttp.get("salaryAssignment/startSession/customerId=" + customerId + "&userId=" + userId);
     }
 }

@@ -12,7 +12,7 @@ router.get('/salaryAssignment', function(req, res) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/startSessionWith', function (req, res) {
+router.get('/salaryAssignment/startWith', function (req, res) {
   var responseData = new utils.JsonResponse();
   var customerId = req.query.customerId;
   var userId = req.query.userId;
@@ -27,7 +27,7 @@ router.get('/startSessionWith', function (req, res) {
   res.end(JSON.stringify(responseData));
 });
 
-router.get('/listSchedules',function (req, res) {
+router.get('/salaryAssignment/listSchedules',function (req, res) {
   var responseData = new utils.JsonResponse();
   var customerId = req.query.customerId;
 
