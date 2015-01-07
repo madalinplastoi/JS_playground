@@ -1,7 +1,8 @@
 /**
  * Created by madalin on 1/2/2015.
  */
-(function (requirejs) {
+var AppConfiguration;
+(function (AppConfiguration) {
     'use strict';
 
     requirejs.config({
@@ -35,10 +36,10 @@
      */
     var start = new Date();
 
-    requirejs.Plugin = null;
+    AppConfiguration.DurandalHttpPlugin = null;
 
     requirejs(['plugins/http'], function(http) {
-        requirejs.Plugin = http;
+        AppConfiguration.DurandalHttpPlugin = http;
         requirejs(['./AppBoot'], function (appReference) {
             appReference.AppBoot.getInstance();
         })
@@ -49,5 +50,5 @@
         console.log("[Resources Loaded]:", map.name, "in " + duration + " ms" + " from " + map.url);
     };
 
-})(requirejs);
+})(AppConfiguration || (AppConfiguration = {}));;
 

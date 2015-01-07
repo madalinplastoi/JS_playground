@@ -32,7 +32,7 @@ export class AppBoot {
             dialog: true
         });
 
-        proxyRef.SalaryAssignment.MainModelProxy.getInstance();
+        proxyRef.MainModelProxy.getInstance();
 
         DurandalAppModule.start().then(function () {
             //Replace 'viewmodels' in the moduleId with 'views' to locate the view.
