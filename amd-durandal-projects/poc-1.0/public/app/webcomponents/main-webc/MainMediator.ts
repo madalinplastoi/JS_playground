@@ -4,16 +4,15 @@
 ///<reference path='../../utils/WebComponent.ts'/>
 
 import webComponentRef = require('./../../utils/WebComponent');
-
-export class MainMediator {
+import mediatorRef = require('./../../utils/Mediator');
+export class MainMediator extends mediatorRef.Mediator{
     private static _instance:MainMediator = null;
-    private viewModel;
 
     constructor(viewModel:webComponentRef.WebComponent) {
         if (MainMediator._instance) {
             throw new Error("Error: Instantiation failed: Use MainMediator.getInstance() instead of new.");
         }
-        this.viewModel = viewModel;
+        super(viewModel);
         MainMediator._instance = this;
     }
 

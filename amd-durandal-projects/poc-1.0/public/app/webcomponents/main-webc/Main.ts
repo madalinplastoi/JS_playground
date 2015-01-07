@@ -5,14 +5,14 @@
 ///<reference path='../../../typings/durandal/durandal.d.ts'/>
 ///<reference path='../../utils/WebComponent.ts'/>
 ///<reference path='MainMediator.ts'/>
-///<reference path='model/MainModelProxy.ts'/>
+///<reference path='../../modelproxies/MainModelProxy.ts'/>
 
 import webComponentRef = require('./../../utils/WebComponent');
 import mainMediatorRef = require('./MainMediator');
-import mainModelProxyRef = require('./model/MainModelProxy');
+import mainModelProxyRef = require('../../modelproxies/MainModelProxy');
 
 class Main extends webComponentRef.WebComponent {
-    //@todo: implement activate method ( which will call the proxy and using promises will update data for view)
+
     dataContext:any = null;
 
     constructor(){
@@ -21,8 +21,10 @@ class Main extends webComponentRef.WebComponent {
 
     activate(headerActivationData:any) {
         mainMediatorRef.MainMediator.getInstance(this);
-        mainModelProxyRef.MainModelProxy.getInstance().loadData(headerActivationData.customerId, headerActivationData.userId).fail(function (error) {
+        mainModelProxyRef.MainModelProxy.getInstance().loadData(headerActivationData.customerId, headerActivationData.userId).fail(function (result) {
             debugger;
+        }).done(function(result){
+            this.dataContext = result;
         })
     }
 }
