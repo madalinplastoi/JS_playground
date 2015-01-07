@@ -9,9 +9,9 @@
 import webComponentRef = require('./../../utils/WebComponent');
 import mediatorRef = require('./ScheduleListMediator');
 import proxyRef = require('../../modelproxies/ScheduleListModelProxy');
-import addScheduleActionProxyRef = require('AddScheduleNavigationActionProxy');
-import deleteScheduleActionProxyRef = require('DeleteScheduleActionProxy');
-import navigateToScheduleActionProxyRef = require('NavigateToScheduleActionProxy');
+import addScheduleActionProxyRef = require('./AddScheduleNavigationActionProxy');
+import deleteScheduleActionProxyRef = require('./DeleteScheduleActionProxy');
+import navigateToScheduleActionProxyRef = require('./NavigateToScheduleActionProxy');
 
 class ScheduleList extends webComponentRef.WebComponent{
     public Schedules = [];

@@ -1,4 +1,3 @@
-[build]*
 
 /Sample1/src/bin
 /Sample1/src/obj
@@ -39,3 +38,13 @@
 /amd-durandal-projects/poc-1.0/public/app/webcomponents/schedulelist-webc/ScheduleList.js.map
 /amd-durandal-projects/poc-1.0/public/app/webcomponents/schedulelist-webc/ScheduleListMediator.js
 /amd-durandal-projects/poc-1.0/public/app/webcomponents/schedulelist-webc/ScheduleListMediator.js.map
+/amd-durandal-projects/poc-1.0/public/app/utils/ActionProxy.js
+/amd-durandal-projects/poc-1.0/public/app/utils/ActionProxy.js.map
+/amd-durandal-projects/poc-1.0/public/app/utils/Mediator.js
+/amd-durandal-projects/poc-1.0/public/app/utils/Mediator.js.map
+/amd-durandal-projects/poc-1.0/public/app/utils/Notifications.js
+/amd-durandal-projects/poc-1.0/public/app/utils/Notifications.js.map
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/schedulelist-webc/DeleteScheduleActionProxy.js
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/schedulelist-webc/DeleteScheduleActionProxy.js.map
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/schedulelist-webc/NavigateToScheduleActionProxy.js
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/schedulelist-webc/NavigateToScheduleActionProxy.js.map
