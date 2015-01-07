@@ -5,6 +5,10 @@ var utils = require('./utils');
 
 /* GET home page. */
 router.get('/', function(req, res) {
+  res.render('landing-page', { title: 'Express' });
+});
+
+router.get('/salaryAssignment', function(req, res) {
   res.render('index', { title: 'Express' });
 });
 
