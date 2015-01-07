@@ -29,3 +29,13 @@
 /amd-durandal-projects/poc-1.0/public/app/utils/Domain.js.map
 
 
+/amd-durandal-projects/poc-1.0/public/app/modelproxies/MainModelProxy.js
+/amd-durandal-projects/poc-1.0/public/app/modelproxies/MainModelProxy.js.map
+/amd-durandal-projects/poc-1.0/public/app/modelproxies/ScheduleListModelProxy.js
+/amd-durandal-projects/poc-1.0/public/app/modelproxies/ScheduleListModelProxy.js.map
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/schedulelist-webc/AddScheduleNavigationActionProxy.js
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/schedulelist-webc/AddScheduleNavigationActionProxy.js.map
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/schedulelist-webc/ScheduleList.js
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/schedulelist-webc/ScheduleList.js.map
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/schedulelist-webc/ScheduleListMediator.js
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/schedulelist-webc/ScheduleListMediator.js.map
