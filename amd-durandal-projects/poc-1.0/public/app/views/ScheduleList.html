@@ -1,0 +1,39 @@
+<div class="widget" id="schedules-list">
+    <div class="widget-header"><h3><i class="fa fa-magic"></i><span data-bind="text: data().TextToDisplay()"></span></h3></div>
+    <div class="widget-content">
+        <div class="wizard-wrapper">
+            <div>
+                <a id="add-salary" data-bind="attr: {'href': data().newScheduleUrl()}">Add Salary Details</a>
+                <div class="widget widget-table">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <td>For Customer</td>
+                            <td>From Employer</td>
+                            <td>Assignment Method</td>
+                            <td>Currency</td>
+                            <td>Expected Salary</td>
+                            <td>Actions</td>
+                        </tr>
+                        </thead>
+                        <tbody data-bind="foreach: data().Schedules">
+                        <tr>
+                            <td data-bind="text: ForCustomer.FirstName + ' ' + ForCustomer.LastName"></td>
+                            <td data-bind="text : FromEmployer.Name"></td>
+                            <td data-bind="text : AssignmentMethod"></td>
+                            <td data-bind="text : Currency.Code"></td>
+                            <td data-bind="text : ExpectedSalary"></td>
+                            <td>
+                                <div class="btn-group btn-group-xs">
+                                    <a class="btn btn-primary" data-bind="attr: { 'href' : '/salaryAssignment?customerId=12&userId=23#/schedule/'+Id }">Go to assignments</a>
+                                    <button style="margin-left: 10px;" type="button" class="btn btn-primary" data-bind="click: $root.action.remove">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
