@@ -12,20 +12,20 @@ import webComponentRef = require('./../../utils/WebComponent');
 import mainMediatorRef = require('./MainMediator');
 import mainModelProxyRef = require('../../modelproxies/MainModelProxy');
 import domainRef = require('./../../utils/Domain');
-import observable = require('plugins/observable');
+import obs = require('plugins/observable');
 
 class Main extends webComponentRef.WebComponent {
 
-    private customer:domainRef.Customer = new domainRef.Customer();
+    private customer:domainRef.Customer;
     static _self:Main = null;
 
     constructor() {
         super();
-        observable.defineProperty(this.customer, 'fullName', function(){
-            debugger;
-            if (this != null)
-                return this.FirstName + ' ' + this.LastName;
-            else return '';
+        this.customer = new domainRef.Customer();
+        obs.defineProperty(this, 'fullName', {
+            read: () => {
+                return this.customer.FirstName + ' ' + this.customer.LastName;
+            }
         });
         Main._self = this;
     }

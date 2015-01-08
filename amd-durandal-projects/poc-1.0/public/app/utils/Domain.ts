@@ -3,9 +3,9 @@
  */
 
 export class Customer {
-    public Id:string;
-    public FirstName:string;
-    public LastName:string;
+    public Id:string = '';
+    public FirstName:string = '';
+    public LastName:string = '';
 
     constructor() {
 
