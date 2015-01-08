@@ -23,13 +23,17 @@ class Schedule extends webComponentRef.WebComponent{
 
     activate(scheduleId:string){
         debugger;
-
-        proxyRef.ScheduleListModelProxy.getInstance().getSchedule(scheduleId).fail(function (result) {
-        }).done(function(result){
-            var schedule = new domainRef.Schedule();
-            schedule.initFromData(result.Data);
-            Schedule._self.Schedule = schedule;
-        });
+        if(scheduleId!='new') {
+            //edit mode
+            proxyRef.ScheduleListModelProxy.getInstance().getSchedule(scheduleId).fail(function (result) {
+            }).done(function (result) {
+                var schedule = new domainRef.Schedule();
+                schedule.initFromData(result.Data);
+                Schedule._self.Schedule = schedule;
+            });
+        }else{
+            //add mode
+        }
     }
     canDeactivate(){
         return true;
