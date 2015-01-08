@@ -8,7 +8,7 @@
 
 import DurandalRootRouter = require('plugins/router');
 import DurandalAppModule = require('durandal/app');
-
+declare var AppConfiguration;
 class Shell {
     public router:any;
     public headerActivationData:any;
@@ -21,13 +21,13 @@ class Shell {
             customerId: 12,
             userId: 23
         };
-
-        this.absoluteURI = 'salaryAssignment?customerId=' + this.headerActivationData.customerId + "&userId=" + this.headerActivationData.userId;
+        AppConfiguration.ActivationData = this.headerActivationData;
+        this.absoluteURI = 'salaryAssignment/customerId=' + this.headerActivationData.customerId + "&userId=" + this.headerActivationData.userId;
     }
 
     activate():void {
         this.router.map([
-            { route: ['', 'default'], title:'Schedule list', moduleId: 'webcomponents/schedulelist-webc/ScheduleList'}
+            { route: ['', 'schedules*details'], title:'Schedule list', moduleId: 'webcomponents/schedulelist-webc/ScheduleList', hash : '#schedules'}
         ]).buildNavigationModel();
 
         return this.router.activate();

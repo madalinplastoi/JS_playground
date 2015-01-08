@@ -4,5 +4,5 @@
 import actionProxyRef = require('../../utils/ActionProxy');
 
 export class AddScheduleNavigationActionProxy extends actionProxyRef.ActionProxy{
-    
+
 }

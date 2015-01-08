@@ -28,8 +28,8 @@ export class ScheduleListModelProxy{
         return this.data;
     }
 
-    loadData(customerId:number, userId:number){
-        return AppConfiguration.DurandalHttpPlugin.get("http://google.com").fail(function(error){
+    loadData(customerId:number){
+        return AppConfiguration.DurandalHttpPlugin.get("/salaryAssignment/listSchedules?customerId=" + customerId).fail(function(error){
             debugger;
         }).done(function(result){
             this.data = result;
