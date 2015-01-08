@@ -13,6 +13,11 @@ exports.JsonResponse = function() {
         this.IsSuccess = false;
     }
 
+    this.initWithSuccess = function (message) {
+        this.Message = message;
+        this.IsSuccess = true;
+    }
+
     return this;
 };
 

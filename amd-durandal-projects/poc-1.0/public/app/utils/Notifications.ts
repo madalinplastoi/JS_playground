@@ -1,7 +1,6 @@
 /**
  * Created by tzutz on 07.01.2015.
  */
-class Notifications{
-
+export class Notifications{
+    public static DELETE_SCHEDULE_COMPLETED:string = "scheduleproxy:on:schedule-deleted";
 }
-export = Notifications;

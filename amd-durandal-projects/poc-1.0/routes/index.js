@@ -49,4 +49,11 @@ router.get('/salaryAssignment/schedule',function (req, res) {
    res.writeHead(200, {'content-type': 'text/json'})
    res.end(JSON.stringify(responseData));
 });
+
+router.get('/salaryAssignment/deleteSchedule',function (req, res) {
+  var responseData = new utils.JsonResponse();
+  responseData.initWithSuccess('Removed!');
+  res.writeHead(200, {'content-type': 'text/json'})
+  res.end(JSON.stringify(responseData));
+});
 module.exports = router;

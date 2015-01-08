@@ -31,7 +31,7 @@ class Main extends webComponentRef.WebComponent {
     }
 
     activate(headerActivationData:any) {
-        mainMediatorRef.MainMediator.getInstance(this);
+        mainMediatorRef.MainMediator.getInstance().register(this);
         mainModelProxyRef.MainModelProxy.getInstance().loadData(headerActivationData.customerId, headerActivationData.userId).fail(function (error) {
             debugger;
         }).done(function(result){

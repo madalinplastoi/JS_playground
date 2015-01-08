@@ -5,20 +5,21 @@
 
 import webComponentRef = require('./../../utils/WebComponent');
 import mediatorRef = require('./../../utils/Mediator');
+
 export class MainMediator extends mediatorRef.Mediator{
     private static _instance:MainMediator = null;
 
-    constructor(viewModel:webComponentRef.WebComponent) {
+    constructor() {
         if (MainMediator._instance) {
             throw new Error("Error: Instantiation failed: Use MainMediator.getInstance() instead of new.");
         }
-        super(viewModel);
+        super();
         MainMediator._instance = this;
     }
 
-    static getInstance(viewModel:webComponentRef.WebComponent):MainMediator {
+    static getInstance():MainMediator {
         if (MainMediator._instance === null) {
-            MainMediator._instance = new MainMediator(viewModel);
+            MainMediator._instance = new MainMediator();
         }
         return MainMediator._instance;
     }
