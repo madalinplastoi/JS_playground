@@ -20,6 +20,7 @@ class ScheduleList extends webComponentRef.WebComponent{
     public NavigateToSchedule:navigateToScheduleActionProxyRef.NavigateToScheduleActionProxy;
 
     activate(activationData){
+        debugger;
         mediatorRef.ScheduleListMediator.getInstance(this);
         this.NavigateToAddSchedule = new addScheduleActionProxyRef.AddScheduleNavigationActionProxy();
         this.DeleteSchedule = new deleteScheduleActionProxyRef.DeleteScheduleActionProxy();
