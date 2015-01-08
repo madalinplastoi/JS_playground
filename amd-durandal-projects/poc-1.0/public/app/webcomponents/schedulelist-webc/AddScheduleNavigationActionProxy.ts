@@ -15,7 +15,8 @@ export class AddScheduleNavigationActionProxy extends actionProxyRef.ActionProxy
             super();
 
             this.navigateToNew = command.asyncCommand({
-                execute: function(callback) {
+                execute: function(context, callback) {
+                    debugger;
                     DurandalRootRouter.navigate("#newschedule");
                 },
 
