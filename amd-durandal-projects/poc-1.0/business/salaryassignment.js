@@ -10,3 +10,14 @@ exports.GetCustomerById = function(id){
 exports.GetSchedulesForCustomer = function(customerId){
     return database.someSchedules1;
 }
+
+exports.GetScheduleById = function (id) {
+    var schedule = null;
+    for(var i=0;i<database.someSchedules1.length;i++){
+        if(database.someSchedules1[i].id == id){
+            schedule = database.someSchedules1[i];
+            break;
+        }
+    }
+    return schedule;
+}

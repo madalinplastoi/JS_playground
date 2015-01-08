@@ -41,4 +41,12 @@ router.get('/salaryAssignment/listSchedules',function (req, res) {
   res.end(JSON.stringify(responseData));
 });
 
+router.get('/salaryAssignment/schedule',function (req, res) {
+  var responseData = new utils.JsonResponse();
+  var scheduleId = req.query.id;
+   responseData.initWithData(salaryassignment.GetScheduleById(scheduleId));
+
+   res.writeHead(200, {'content-type': 'text/json'})
+   res.end(JSON.stringify(responseData));
+});
 module.exports = router;
