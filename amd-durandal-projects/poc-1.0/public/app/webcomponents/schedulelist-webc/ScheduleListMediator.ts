@@ -26,7 +26,6 @@ export class ScheduleListMediator extends mediatorRef.Mediator{
             debugger;
             switch(msg){
                 case notifications.Notifications.DELETE_SCHEDULE_COMPLETED:{
-                    //ScheduleListMediator.getInstance().context.onScheduleRemoved(payload);
                     (<ScheduleList> /*</>*/ScheduleListMediator.getInstance().context).onScheduleRemoved(payload);
                 }
             }

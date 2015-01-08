@@ -16,7 +16,7 @@ import domainRef = require('./../../utils/Domain');
 
 declare var AppConfiguration;
 class ScheduleList extends webComponentRef.WebComponent{
-    public Schedules:Array = [];
+    public Schedules:Array<domainRef.Schedule> = [];
     public NavigateToAddSchedule:addScheduleActionProxyRef.AddScheduleNavigationActionProxy;
     public DeleteSchedule:deleteScheduleActionProxyRef.DeleteScheduleActionProxy;
     public NavigateToSchedule:navigateToScheduleActionProxyRef.NavigateToScheduleActionProxy;
