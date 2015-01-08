@@ -23,16 +23,6 @@ class Shell {
         };
 
         this.absoluteURI = 'salaryAssignment?customerId=' + this.headerActivationData.customerId + "&userId=" + this.headerActivationData.userId;
-
-        this.router.on('router:route:not-found').then(function(e){
-            debugger;
-        });
-
-        DurandalAppModule.on('all').then(function(event){
-            //the arguments array contains the payload
-
-            debugger;
-        });
     }
 
     activate():void {
