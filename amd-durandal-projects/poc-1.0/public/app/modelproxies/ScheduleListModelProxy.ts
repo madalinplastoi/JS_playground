@@ -35,4 +35,8 @@ export class ScheduleListModelProxy{
             this.data = result;
         });
     }
+
+    getSchedule(scheduleId:string){
+        return AppConfiguration.DurandalHttpPlugin.get("/salaryAssignment/schedule?id="+ scheduleId);
+    }
 }

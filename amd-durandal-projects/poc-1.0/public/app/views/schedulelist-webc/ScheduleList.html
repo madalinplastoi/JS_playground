@@ -3,7 +3,7 @@
     <div class="widget-content">
         <div class="wizard-wrapper">
             <div>
-                <a id="add-salary" data-bind="command :NavigateToAddSchedule.navigateToNew">Add Salary Details</a>
+                <a id="add-salary" data-bind="command :NavigateToAddSchedule.Command">Add Salary Details</a>
                 <div class="widget widget-table">
                     <table class="table">
                         <thead>
@@ -25,7 +25,7 @@
                             <td data-bind="text : ExpectedSalary"></td>
                             <td>
                                 <div class="btn-group btn-group-xs">
-                                    <a class="btn btn-primary" data-bind="click:$parent.NavigateToSchedule.Command">Go to assignments</a>
+                                    <a class="btn btn-primary" data-bind="command : $parent.NavigateToSchedule.Command">Go to assignments</a>
                                     <button style="margin-left: 10px;" type="button" class="btn btn-primary" data-bind="click: $parent.DeleteSchedule.Command">Delete</button>
                                 </div>
                             </td>

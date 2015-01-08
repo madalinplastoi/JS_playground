@@ -10,11 +10,11 @@ import DurandalRootRouter = require('plugins/router');
 import command = require('kocommand');
 
 export class AddScheduleNavigationActionProxy extends actionProxyRef.ActionProxy{
-    private navigateToNew: KoliteAsyncCommand;
+    private Command: KoliteAsyncCommand;
     constructor(){
             super();
 
-            this.navigateToNew = command.asyncCommand({
+            this.Command = command.asyncCommand({
                 execute: function(context, callback) {
                     debugger;
                     DurandalRootRouter.navigate("#newschedule");

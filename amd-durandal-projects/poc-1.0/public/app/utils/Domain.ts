@@ -99,7 +99,7 @@ export class Customer {
         }
 
         initFromData(data:any){
-            this.Id = data.Id;
+            this.Id = data.id;
             this.ForCustomer.init(data.forCustomer.id,data.forCustomer.firstName, data.forCustomer.lastName);
             this.FromEmployer.init(data.fromEmployer.id,data.fromEmployer.name);
             this.AssignmentMethod = data.assignmentMethod != null ? data.assignmentMethod.code : '';
