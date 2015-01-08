@@ -34,7 +34,6 @@ class ScheduleList extends webComponentRef.WebComponent{
         this.DeleteSchedule = new deleteScheduleActionProxyRef.DeleteScheduleActionProxy();
         this.NavigateToSchedule = new navigateToScheduleActionProxyRef.NavigateToScheduleActionProxy();
         proxyRef.ScheduleListModelProxy.getInstance().loadData(activationData.customerId).fail(function (result) {
-            debugger;
         }).done(function(result){
             if(result!=null && result.Data!=null){
                 var schedules = [];
@@ -43,10 +42,12 @@ class ScheduleList extends webComponentRef.WebComponent{
                     schedule.initFromData(result.Data[i]);
                     schedules.push(schedule);
                 }
-                debugger;
                 ScheduleList._self.Schedules.push.apply(ScheduleList._self.Schedules,schedules);
             }
         });
+    }
+    canDeactivate(){
+        return true;
     }
 }
 export = ScheduleList;

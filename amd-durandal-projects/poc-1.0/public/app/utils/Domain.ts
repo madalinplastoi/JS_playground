@@ -102,7 +102,7 @@ export class Customer {
             this.Id = data.Id;
             this.ForCustomer.init(data.forCustomer.id,data.forCustomer.firstName, data.forCustomer.lastName);
             this.FromEmployer.init(data.fromEmployer.id,data.fromEmployer.name);
-            this.AssignmentMethod = data.assignmentMethod;
+            this.AssignmentMethod = data.assignmentMethod != null ? data.assignmentMethod.code : '';
             this.Currency.init(data.currency.code, data.currency.description,data.currency.symbol);
 
         }

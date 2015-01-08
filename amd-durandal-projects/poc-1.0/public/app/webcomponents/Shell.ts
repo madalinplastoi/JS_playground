@@ -26,8 +26,10 @@ class Shell {
     }
 
     activate():void {
+
         this.router.map([
-            { route: ['', 'schedules*details'], title:'Schedule list', moduleId: 'webcomponents/schedulelist-webc/ScheduleList', hash : '#schedules'}
+            { route: '', title:'Schedule list', moduleId: 'webcomponents/schedulelist-webc/ScheduleList'},
+            { route: 'newschedule', title:'Schedule new', moduleId: 'webcomponents/schedulelist-webc/ScheduleList', hash : '#newschedule'}
         ]).buildNavigationModel();
 
         return this.router.activate();
