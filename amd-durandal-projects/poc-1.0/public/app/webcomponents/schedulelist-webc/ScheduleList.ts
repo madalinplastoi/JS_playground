@@ -47,6 +47,7 @@ class ScheduleList extends webComponentRef.WebComponent{
         });
     }
     canDeactivate(){
+        mediatorRef.ScheduleListMediator.getInstance().unregister();
         return true;
     }
 

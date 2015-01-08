@@ -13,4 +13,8 @@ export class Mediator{
         if(this.context == null)this.context = viewModel;
         else throw('Mediator is already registered!');
     }
+
+    unregister(){
+        this.context = null;
+    }
 }

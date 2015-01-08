@@ -38,6 +38,11 @@ class Main extends webComponentRef.WebComponent {
             Main._self.customer.init(result.Data.id, result.Data.firstName, result.Data.lastName);
         })
     }
+
+    canDeactivate(){
+        mainMediatorRef.MainMediator.getInstance().unregister();
+        return true;
+    }
 }
 
 export = Main;
