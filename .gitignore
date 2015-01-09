@@ -9,6 +9,7 @@
 /Sample1/src/npm-debug.log
 /amd-durandal-projects/poc-1.0/.idea
 /amd-durandal-projects/poc-1.0/node_modules
+/amd-durandal-projects/poc-1.0/public/build
 
 /amd-durandal-projects/poc-1.0/public/app/AppBoot.js
 /amd-durandal-projects/poc-1.0/public/app/AppBoot.js.map
@@ -26,8 +27,6 @@
 /amd-durandal-projects/poc-1.0/public/app/utils/WebComponent.js.map
 /amd-durandal-projects/poc-1.0/public/app/utils/Domain.js
 /amd-durandal-projects/poc-1.0/public/app/utils/Domain.js.map
-
-
 /amd-durandal-projects/poc-1.0/public/app/modelproxies/MainModelProxy.js
 /amd-durandal-projects/poc-1.0/public/app/modelproxies/MainModelProxy.js.map
 /amd-durandal-projects/poc-1.0/public/app/modelproxies/ScheduleListModelProxy.js
@@ -52,6 +51,3 @@
 /amd-durandal-projects/poc-1.0/public/app/webcomponents/schedule-webc/Schedule.js.map
 /amd-durandal-projects/poc-1.0/public/app/webcomponents/schedule-webc/ScheduleMediator.js
 /amd-durandal-projects/poc-1.0/public/app/webcomponents/schedule-webc/ScheduleMediator.js.map
-/amd-durandal-projects/poc-1.0/public/build/css/style.min.css
-/amd-durandal-projects/poc-1.0/public/build/js/main-build.js
-/amd-durandal-projects/poc-1.0/public/build/js/main-built.js
