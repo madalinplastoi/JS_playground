@@ -17,6 +17,7 @@ export  class NavigateToScheduleActionProxy extends actionProxyRef.ActionProxy{
             execute: function(context, callback) {
                 debugger;
                 DurandalRootRouter.navigate("#schedule/" + context.Id);
+                callback();
             },
 
             canExecute: function(isExecuting) {
