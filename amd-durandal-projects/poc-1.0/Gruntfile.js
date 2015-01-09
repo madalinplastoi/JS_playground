@@ -64,7 +64,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-durandal');
 
-    grunt.registerTask('default', ['clean']);
+    grunt.registerTask('stage', ['clean', 'cssmin']);
     grunt.registerTask('stage', ['clean', 'cssmin']);
     grunt.registerTask('prod', ['clean', 'cssmin', 'durandal']);
 }
