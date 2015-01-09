@@ -51,3 +51,15 @@
 /amd-durandal-projects/poc-1.0/public/app/webcomponents/schedule-webc/Schedule.js.map
 /amd-durandal-projects/poc-1.0/public/app/webcomponents/schedule-webc/ScheduleMediator.js
 /amd-durandal-projects/poc-1.0/public/app/webcomponents/schedule-webc/ScheduleMediator.js.map
+/amd-durandal-projects/poc-1.0/public/app/modelproxies/MockOperationsModelProxy.js
+/amd-durandal-projects/poc-1.0/public/app/modelproxies/MockOperationsModelProxy.js.map
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/server-operations/GetAlertActionProxy.js
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/server-operations/GetAlertActionProxy.js.map
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/server-operations/GetErrorActionProxy.js
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/server-operations/GetErrorActionProxy.js.map
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/server-operations/GetSuccessActionProxy.js
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/server-operations/GetSuccessActionProxy.js.map
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/server-operations/MockOperationsMediator.js
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/server-operations/MockOperationsMediator.js.map
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/server-operations/ServerOperations.js
+/amd-durandal-projects/poc-1.0/public/app/webcomponents/server-operations/ServerOperations.js.map
