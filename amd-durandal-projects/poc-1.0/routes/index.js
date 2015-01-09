@@ -56,4 +56,32 @@ router.get('/salaryAssignment/deleteSchedule',function (req, res) {
   res.writeHead(200, {'content-type': 'text/json'})
   res.end(JSON.stringify(responseData));
 });
+
+router.get('/doServerCall/:id',function (req, res) {
+  var responseData = new utils.JsonResponse();
+  var param = req.param('id');
+  switch(param)
+  {
+    case "success":{
+      responseData.initWithSuccess('success');
+      break;
+    }
+    case "alert":{
+      responseData.initWithSuccess('alert');
+      break;
+    }
+    case "error":{
+      responseData.initWithError('error');
+      break;
+    }
+    default:{
+      responseData.initWithError('error');
+      break;
+    }
+  }
+
+  res.writeHead(200, {'content-type': 'text/json'})
+  res.end(JSON.stringify(responseData));
+});
+
 module.exports = router;

@@ -23,7 +23,6 @@ export class ScheduleListMediator extends mediatorRef.Mediator{
         ScheduleListMediator._instance = this;
 
         DurandalAppModule.on('all', function(msg, payload){
-            debugger;
             switch(msg){
                 case notifications.Notifications.DELETE_SCHEDULE_COMPLETED:{
                     (<ScheduleList> /*</>*/ScheduleListMediator.getInstance().context).onScheduleRemoved(payload);

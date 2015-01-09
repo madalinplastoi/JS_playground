@@ -6,3 +6,32 @@ body {
 a {
   color: #00B7FF;
 }
+
+.webc{
+  border:1px solid #000000;
+  padding: 10px;
+  margin: 10px;
+}
+
+.basic-button{
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.success{
+  background-color: green;
+}
+
+.fail{
+  background-color: red;
+}
+
+.alert{
+  background-color: orange;
+}
+
+button:disabled{
+  background-color: dimgray;
+  color: #ffffff;
+}

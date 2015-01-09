@@ -46,7 +46,6 @@ module.exports = function (grunt) {
                         jquery: '../lib/jquery/jquery-1.9.1',
                         knockout: '../lib/knockout/knockout-3.1.0',
                         kocommand : '../lib/kolite/knockout.command'
-
                     },
                     uglify2: {
                         compress: {

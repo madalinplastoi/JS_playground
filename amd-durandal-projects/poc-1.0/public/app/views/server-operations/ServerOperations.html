@@ -1,0 +1,19 @@
+<div>
+    <h2>Here, real $.ajax server requests are made !!!</h2>
+    <h3>Server response is passed and parsed into notification through promise chain into the action proxy:</h3>
+    <div>
+        <button class="basic-button success" data-bind="command: GetSuccess.Command">Make it work</button>
+        <span style="display: none;" class="running" data-bind="visible: GetSuccess.Command.isExecuting">running...</span>
+        <span style="color:green;" data-bind="text: GetSuccess.notification">OK</span>
+    </div>
+    <div>
+        <button class="basic-button alert" data-bind="command: GetAlert.Command">Make it alert</button>
+        <span style="display: none;" class="running" data-bind="visible: GetAlert.Command.isExecuting">running...</span>
+        <span style="color:orange;" data-bind="text: GetAlert.notification"></span>
+    </div>
+    <div>
+        <button class="basic-button fail" data-bind="command: GetError.Command">Make it fail</button>
+        <span style="display: none;" class="running" data-bind="visible: GetError.Command.isExecuting">running...</span>
+        <span style="color:red;" data-bind="text: GetError.notification"></span>
+    </div>
+</div>
