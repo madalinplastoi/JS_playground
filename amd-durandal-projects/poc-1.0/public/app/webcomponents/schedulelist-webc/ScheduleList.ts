@@ -27,12 +27,22 @@ class ScheduleList extends webComponentRef.WebComponent{
         ScheduleList._self = this;
     }
 
-    activate(){
-        var activationData = AppConfiguration.ActivationData;
-        mediatorRef.ScheduleListMediator.getInstance().register(this);
+    initProxies():void{
         this.NavigateToAddSchedule = new addScheduleActionProxyRef.AddScheduleNavigationActionProxy();
         this.DeleteSchedule = new deleteScheduleActionProxyRef.DeleteScheduleActionProxy();
         this.NavigateToSchedule = new navigateToScheduleActionProxyRef.NavigateToScheduleActionProxy();
+    }
+
+    activate(){
+        //retrieve CustomerId and UserId from AppConfiguration (there we can define a routine to fetch data from URL query string)
+        var activationData = AppConfiguration.ActivationData;
+
+        //register mediator
+        mediatorRef.ScheduleListMediator.getInstance().register(this);
+
+        //init proxies
+        this.initProxies();
+
         proxyRef.ScheduleListModelProxy.getInstance().loadData(activationData.customerId).fail(function (result) {
         }).done(function(result){
             if(result!=null && result.Data!=null){

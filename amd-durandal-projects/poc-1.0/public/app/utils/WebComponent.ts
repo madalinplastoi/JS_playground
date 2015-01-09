@@ -11,4 +11,8 @@ export class WebComponent {
     canDeactivate():void {
 
     }
+
+    initProxies():void{
+
+    }
 }

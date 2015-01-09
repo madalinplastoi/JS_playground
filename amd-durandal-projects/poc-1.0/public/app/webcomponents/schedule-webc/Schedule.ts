@@ -21,9 +21,12 @@ class Schedule extends webComponentRef.WebComponent{
         Schedule._self = this;
     }
 
-    activate(scheduleId:string){
-        debugger;
-        if(scheduleId!='new') {
+    initProxies():void{
+    }
+
+    activate(scheduleId:string) {
+        this.initProxies();
+        if (scheduleId != 'new') {
             //edit mode
             proxyRef.ScheduleListModelProxy.getInstance().getSchedule(scheduleId).fail(function (result) {
             }).done(function (result) {
@@ -31,10 +34,11 @@ class Schedule extends webComponentRef.WebComponent{
                 schedule.initFromData(result.Data);
                 Schedule._self.Schedule = schedule;
             });
-        }else{
+        } else {
             //add mode
         }
     }
+
     canDeactivate(){
         return true;
     }

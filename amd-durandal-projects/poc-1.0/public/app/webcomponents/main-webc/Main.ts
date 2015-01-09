@@ -30,8 +30,14 @@ class Main extends webComponentRef.WebComponent {
         Main._self = this;
     }
 
+    initProxies():void{
+
+    }
+
     activate(headerActivationData:any) {
         mainMediatorRef.MainMediator.getInstance().register(this);
+        this.initProxies();
+
         mainModelProxyRef.MainModelProxy.getInstance().loadData(headerActivationData.customerId, headerActivationData.userId).fail(function (error) {
             debugger;
         }).done(function(result){
@@ -39,7 +45,7 @@ class Main extends webComponentRef.WebComponent {
         })
     }
 
-    canDeactivate(){
+    canDeactivate() {
         mainMediatorRef.MainMediator.getInstance().unregister();
         return true;
     }
