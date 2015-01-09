@@ -20,6 +20,7 @@ class Main extends webComponentRef.WebComponent {
     static _self:Main = null;
 
     constructor() {
+        debugger;
         super();
         this.customer = new domainRef.Customer();
         obs.defineProperty(this, 'fullName', {
@@ -49,6 +50,14 @@ class Main extends webComponentRef.WebComponent {
         mainMediatorRef.MainMediator.getInstance().unregister();
         return true;
     }
+
+}
+export var ViewModel = new Main();
+export var activate = function(activationData){ return ViewModel.activate(activationData);};
+export var canDeactivate = function () {
+    return ViewModel.canDeactivate();
 }
 
-export = Main;
+
+
+
