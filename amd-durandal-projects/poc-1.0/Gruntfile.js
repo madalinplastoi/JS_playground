@@ -23,26 +23,15 @@ module.exports = function (grunt) {
             }
         },
 
-        requirejs: {
-            compile: {
-                options: {
-                    baseUrl: "public/app",
-                    mainConfigFile: "public/app/main.js",
-                    include: "main",
-                    name: "../../node_modules/almond/almond",
-                    out: "public/build/js/main-build.js",
-                    findNestedDependencies: true,
-                    optimize: 'uglify'
-                }
-            }
-        },
-
         durandal: {
             dist: {
                 src: [
+                    "public/app/*.js",
                     "public/app/**/*.js",
-                    "public/app/*.js"
+                    "public/app/views/*.html",
+                    "public/app/views/**/*.html",
 
+                    "public/lib/durandal/js/**/*.js"
                 ],
                 options: {
                     name: '../lib/require/almond-custom',
@@ -59,9 +48,13 @@ module.exports = function (grunt) {
                         kocommand : '../lib/kolite/knockout.command'
 
                     },
-                    optimize: 'none',
-
-
+                    uglify2: {
+                        compress: {
+                            global_defs: {
+                                DEBUG: false
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -70,7 +63,6 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-durandal');
 
     grunt.registerTask('default', ['clean']);
