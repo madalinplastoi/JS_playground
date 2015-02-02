@@ -1,0 +1,22 @@
+{
+  "name": "TypescriptModules",
+  "version": "1.0.0",
+  "description": "Play with Typescript modules, RequireJS, AMD, Web components and Grunt. ",
+  "main": "appConfig.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-ts": "^2.0.0"
+  },
+  "scripts": {
+    "test": "dev"
+  },
+  "keywords": [
+    "Typescript",
+    "modules",
+    "RequireJS",
+    "AMD",
+    "Grunt"
+  ],
+  "author": "madalinplastoi",
+  "license": "ISC"
+}

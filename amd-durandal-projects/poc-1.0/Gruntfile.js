@@ -47,14 +47,7 @@ module.exports = function (grunt) {
                         knockout: '../lib/knockout/knockout-3.1.0',
                         kocommand : '../lib/kolite/knockout.command'
                     },
-
-                    uglify2: {
-                        compress: {
-                            global_defs: {
-                                DEBUG: false
-                            }
-                        }
-                    }
+                    optimize:'none'
                 }
             }
         }

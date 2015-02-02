@@ -1,0 +1,21 @@
+<div id="persons">
+    <h2>Persons:</h2>
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Age</th>
+            <th>Actions:</th>
+        </thead>
+    </table>
+    <table data-bind="foreach: data.Persons">
+       <tr>
+           <td><span data-bind="text:Id"></span></td>
+           <td><span data-bind="text:FirstName"></span></td>
+           <td><span data-bind="text:LastName"></span></td>
+           <td><span data-bind="text:Age"></span></td>
+           <td><button data-bind="click:$parent.action.remove">Delete</button></td>
+       </tr>
+    </table>
+</div>
